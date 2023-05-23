@@ -1,0 +1,40 @@
+/*********
+ *GENERAL*
+ *********/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#main-container {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient( #009688 20%, #dadbd2 20% 80%);
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/******
+ *MAIN*
+ ******/
+
+#app-container {
+    max-width: 1600px;
+    min-width: 1300px;
+    max-height: 920px;
+    min-height: 800px;
+}
+
+
+
+
+/* debug */
+
+.position {
+    background-color: black;
+    border: 4px solid red;
+}
