@@ -12,7 +12,6 @@
     width: 100vw;
     height: 100vh;
     background: linear-gradient( #009688 20%, #dadbd2 20% 80%);
-    overflow: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,11 +22,26 @@
  ******/
 
 #app-container {
-    max-width: 1600px;
-    min-width: 1300px;
-    max-height: 920px;
-    min-height: 800px;
+    width: 1300px;
+    height: 800px;
+    display: flex;
 }
+
+
+    /* navigation */
+
+    #nav-cnt {
+        width: 35%;
+        height: 100%;
+    }
+
+
+    /* chat container */
+
+    #chat-cnt {
+        width: 65%;
+        height: 100%;
+    }
 
 
 
