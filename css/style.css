@@ -36,12 +36,77 @@
     }
 
 
+        /* profile section */
+
+        #prof-nav-cnt {
+            height: 80px;
+            width: 100%;
+        }
+
+
+
+        /* notification section  */
+        #notification-cnt {
+            height: 80px;
+            width: 100%;
+        }
+
+
+
+        /* search bar */
+
+        #searchbar-cnt {
+            height: 50px;
+            width: 100%;
+        }
+
+
+        
+        /* friend list */
+
+        #friend-list-cnt {
+            height: calc(100% - 210px);
+            width: 100%;
+            overflow: hidden;
+            overflow-y: scroll;
+        }
+
+
+
+
     /* chat container */
 
     #chat-cnt {
         width: 65%;
         height: 100%;
     }
+
+
+
+        /* profile bar */
+
+        #prof-chat-bar {
+            height: 80px;
+            width: 100%;
+        }
+
+
+        /* chat messages */
+
+        #chat-bar-cnt {
+            height: calc(100% - 160px);
+            width: 100%;
+            overflow: hidden;
+            overflow-y: scroll;
+        }
+
+
+        /* sender message */
+
+        #send-msg-cnt {
+            height: 80px;
+            width: 100%;
+        }
 
 
 
