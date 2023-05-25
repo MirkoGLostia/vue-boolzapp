@@ -114,25 +114,14 @@
 
                 <!-- chat bar -->
                 <div id="chat-bar-cnt">
-                    <!-- user message  -->
-                    <div class="message user-mxg">
+
+                    <div class="message" v-for="message in contacts[contactValue].messages" :class="[message.status]">
                         <p>
-                            sono user
+                            {{message.text}}
                         </p>
 
                         <span>
-                            ora
-                        </span>
-                    </div>
-
-                    <!-- pc message  -->
-                    <div class="message">
-                        <p>
-                            sono pc
-                        </p>
-
-                        <span>
-                            ora
+                            {{message.date}}
                         </span>
                     </div>
                 </div>

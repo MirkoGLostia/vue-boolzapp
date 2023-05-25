@@ -229,7 +229,6 @@
         }
 
         .message {
-            background-color: white;
             width: 300px;
             margin: 5px;
             padding: 10px 5px 5px 10px;
@@ -242,9 +241,13 @@
             color: rgb(177, 169, 169);
         }
 
-        .user-mxg {
+        .sent {
             align-self: flex-end;
             background-color: rgb(213, 249, 186);
+        }
+
+        .received {
+            background-color: white;
         }
 
 
