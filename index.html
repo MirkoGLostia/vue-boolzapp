@@ -19,11 +19,11 @@
                 <div id="prof-nav-cnt">
                     <div id="prof-nav-pic">
                         <div class="card-pic">
-                            <img src="https://xsgames.co/randomusers/avatar.php?g=pixel" alt="">
+                            <img src="img/img1.jpg" alt="">
                         </div>
                         
                         <span>
-                            testo di prova
+                            Utente
                         </span>
                     </div>
 
@@ -64,17 +64,17 @@
 
                 <!-- friend chat list -->
                 <div id="friend-list-cnt">
-                    <div class="card-chat">
+                    <div v-for="contact in contacts" class="card-chat">
                         <div class="card-pic">
-                            <img src="https://xsgames.co/randomusers/avatar.php?g=pixel" alt="">
+                            <img :src="contact.avatar" alt="">
                         </div>
 
                         <div>
                             <h3>
-                                nome
+                                {{contact.name}}
                             </h3>
                             <span>
-                                ultimo messaggio inviato
+                                last message
                             </span>
                         </div>
 
@@ -92,7 +92,7 @@
                 <!-- profile bar -->
                 <div id="prof-chat-bar">
                     <div class="card-pic">
-                        <img src="https://xsgames.co/randomusers/avatar.php?g=pixel" alt="">
+                        <img :src="contacts[1].avatar" alt="">
                     </div>
 
                     <div>
@@ -156,7 +156,7 @@
     </main>
 
 
-
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="js/main.js"></script>
     
 </body>
