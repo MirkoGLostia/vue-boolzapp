@@ -6,7 +6,6 @@ const { createApp } = Vue;
 createApp( {
     data () {
         return {
-            contactValue : 0,
             contacts : [
             {
                 name: 'Michele',
@@ -169,15 +168,45 @@ createApp( {
                     }
                 ],
             }
-        ]
+            ],
+            contactValue : 0,
+            userMessage : '',
         }
-        
-        
     },
 
     methods : {
         selectChat : function (i) {
             this.contactValue = i;
+        },
+
+        newMessage : function () {
+
+            if (this.userMessage !== '') {
+                const message = {
+                        date: '10/01/2020 15:30:55',
+                        text: this.userMessage,
+                        status: 'sent'
+                    };
+    
+                this.contacts[this.contactValue].messages.push(message);
+    
+                this.userMessage = '';
+            }
+
+        },
+
+        pcAnswer : function () {
+
+            const message = {
+                date: '10/01/2020 15:30:55',
+                text: 'ok',
+                status: 'received'
+            };
+
+            const functionForTImer = function () {this.contacts[this.contactValue].messages.push(message)}.bind(this);
+
+            setTimeout (functionForTImer, 1000);
+            
         },
     }
 

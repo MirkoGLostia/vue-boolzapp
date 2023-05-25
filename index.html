@@ -72,15 +72,16 @@
                         <div>
                             <h3>
                                 {{contact.name}}
+                                <!-- {{contact.messages[messages.length - 1]}} -->
                             </h3>
                             <span>
-                                last message
+                                {{contact.messages[0].text}}
                             </span>
                         </div>
 
                         <div class="card-time">
                             <span>
-                                ora
+                                {{contact.messages[0].date}}
                             </span>
                         </div>
                     </div>
@@ -133,11 +134,11 @@
                     </div>
 
                     <div id="meassage-sender-cnt">
-                        <input type="text" placeholder="Scrivi un messaggio">
+                        <input type="text" placeholder="Scrivi un messaggio" v-model="userMessage" @keyup.enter="()=>{newMessage(); pcAnswer();}">
                     </div>
 
                     <div>
-                        <i class="fa-solid fa-microphone"></i>
+                        <i class="fa-solid fa-microphone" @click="()=>{newMessage(); pcAnswer();}"></i>
                     </div>
                 </div>
             </section>
