@@ -6,7 +6,8 @@ const { createApp } = Vue;
 createApp( {
     data () {
         return {
-            contacts: [
+            contactValue : 0,
+            contacts : [
             {
                 name: 'Michele',
                 avatar: 'img/img2.jpg',
@@ -172,6 +173,12 @@ createApp( {
         }
         
         
+    },
+
+    methods : {
+        selectChat : function (i) {
+            this.contactValue = i;
+        },
     }
 
 }).mount("#app-container");

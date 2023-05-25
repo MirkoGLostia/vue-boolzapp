@@ -64,7 +64,7 @@
 
                 <!-- friend chat list -->
                 <div id="friend-list-cnt">
-                    <div v-for="contact in contacts" class="card-chat">
+                    <div v-for="(contact, ind) in contacts" class="card-chat" @click="selectChat(ind)">
                         <div class="card-pic">
                             <img :src="contact.avatar" alt="">
                         </div>
@@ -92,12 +92,12 @@
                 <!-- profile bar -->
                 <div id="prof-chat-bar">
                     <div class="card-pic">
-                        <img :src="contacts[1].avatar" alt="">
+                        <img :src="contacts[contactValue].avatar" alt="">
                     </div>
 
                     <div>
                         <h3>
-                            nome
+                            {{contacts[contactValue].name}}
                         </h3>
 
                         <span>
