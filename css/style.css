@@ -39,16 +39,68 @@
         /* profile section */
 
         #prof-nav-cnt {
+            background-color: rgb(234, 234, 234);
             height: 80px;
             width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #prof-nav-pic {
+            display: flex;
+            align-items: center;
+        }
+
+        #prof-nav-pic > div {
+            margin: 15px;
+
+            /* debug */
+            width: 50px;
+            height: 50px;
+        }
+
+        #prof-nav-menu {
+            color: rgb(177, 177, 177);
+            text-align: center;
+            font-size: 24px;
+            margin: auto 0;
+        }
+
+        #prof-nav-menu > i {
+            padding-right: 20px;
         }
 
 
 
         /* notification section  */
         #notification-cnt {
+            display: flex;
+            align-items: center;
+            background-color: rgb(142, 218, 252);
             height: 80px;
             width: 100%;
+        }
+
+        #notificatoin-bell {
+            background-color: white;
+            width: 50px;
+            height: 50px;
+            margin: 15px;
+            padding-top: 12px;
+            border-radius: 50%;
+            text-align: center;
+            color: rgb(142, 218, 252);
+            font-size: 24px;
+        }
+
+        #notification-cnt h4 {
+            font-weight: 500;
+        }
+
+        #notification-cnt a {
+            font-size: 16px;
+            color: grey;
+            text-decoration: underline;
         }
 
 
@@ -56,8 +108,28 @@
         /* search bar */
 
         #searchbar-cnt {
+            background-color: rgb(250, 250, 250);
             height: 50px;
             width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #searchbar-cnt input, button {
+            background-color: white;
+            font-size: 16px;
+            border: 0;
+        }
+
+        #searchbar-cnt button {
+            color: rgb(177, 177, 177);
+            padding: 5px 10px;
+        }
+
+        #searchbar-cnt input {
+            padding: 5px;
+            width: 400px;
         }
 
 
