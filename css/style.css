@@ -17,13 +17,24 @@
     align-items: center;
 }
 
+
+
+.card-pic {
+    margin: 15px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
 /******
  *MAIN*
  ******/
 
 #app-container {
-    width: 1300px;
-    height: 800px;
+    width: 100%;
+    max-width: 1300px;
+    height: 100%;
+    max-height: 800px;
     display: flex;
 }
 
@@ -49,14 +60,6 @@
         #prof-nav-pic {
             display: flex;
             align-items: center;
-        }
-
-        #prof-nav-pic > div {
-            margin: 15px;
-
-            /* debug */
-            width: 50px;
-            height: 50px;
         }
 
         #prof-nav-menu {
@@ -159,14 +162,6 @@
             color: lightgrey;
         }
 
-        .card-pic {
-            margin: 15px;
-
-            /* debug */
-            width: 50px;
-            height: 50px;
-        }
-
         .card-time {
             flex-grow: 1;
             text-align: right;
@@ -187,8 +182,27 @@
         /* profile bar */
 
         #prof-chat-bar {
+            background-color: rgb(234, 234, 234);
             height: 80px;
             width: 100%;
+            border-left: 1px solid rgb(175, 167, 167);
+            display: flex;
+            align-items: center;
+            color: rgb(167, 162, 162);
+        }
+
+        #prof-chat-bar h3 {
+            color: black;
+        }
+
+        #prof-chat-bar-menu {
+            flex-grow: 1;
+            text-align: right;
+            font-size: 22px;
+        }
+        
+        #prof-chat-bar-menu i {
+            padding-right: 20px;
         }
 
 
@@ -205,8 +219,31 @@
         /* sender message */
 
         #send-msg-cnt {
+            background-color: rgb(243, 238, 234);
+            border-left: 1px solid rgb(175, 167, 167);
             height: 80px;
             width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #send-msg-cnt i {
+            font-size: 26px;
+            color: rgb(92, 88, 88);
+        }
+
+        #meassage-sender-cnt {
+            margin: 0 40px;
+            width: 75%;
+        }
+
+        #meassage-sender-cnt input {
+            border: 0;
+            border-radius: 5px;
+            padding: 15px;
+            width: 100%;
+            font-size: 14px;
         }
 
 
