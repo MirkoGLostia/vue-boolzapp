@@ -58,31 +58,33 @@
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </button>
 
-                        <input name="search-name-chat" type="text" placeholder="Cerca o inizia una nuova chat">
+                        <input name="search-name-chat" type="text" placeholder="Cerca o inizia una nuova chat" v-model="chatSearch">
                     </div>
                 </div>
 
                 <!-- friend chat list -->
                 <div id="friend-list-cnt">
-                    <div v-for="(contact, ind) in contacts" class="card-chat" @click="selectChat(ind)">
-                        <div class="card-pic">
-                            <img :src="contact.avatar" alt="">
-                        </div>
-
-                        <div>
-                            <h3>
-                                {{contact.name}}
-                                <!-- {{contact.messages[messages.length - 1]}} -->
-                            </h3>
-                            <span>
-                                {{contact.messages[0].text}}
-                            </span>
-                        </div>
-
-                        <div class="card-time">
-                            <span>
-                                {{contact.messages[0].date}}
-                            </span>
+                    <div v-for="(contact, ind) in nameChatSearch">
+                        <div class="card-chat" @click="selectChat(ind)">
+                            <div class="card-pic">
+                                <img :src="contact.avatar" alt="">
+                            </div>
+    
+                            <div>
+                                <h3>
+                                    {{contact.name}}
+                                    <!-- {{contact.messages[messages.length - 1]}} -->
+                                </h3>
+                                <span>
+                                    {{contact.messages[0].text}}
+                                </span>
+                            </div>
+    
+                            <div class="card-time">
+                                <span>
+                                    {{contact.messages[0].date}}
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>

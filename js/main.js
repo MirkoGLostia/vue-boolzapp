@@ -171,6 +171,7 @@ createApp( {
             ],
             contactValue : 0,
             userMessage : '',
+            chatSearch : '',
         }
     },
 
@@ -208,6 +209,13 @@ createApp( {
             setTimeout (functionForTImer, 1000);
             
         },
+    },
+    
+    computed: {
+        nameChatSearch: function () {
+        return this.contacts.filter(element => {
+          return element.name.toLowerCase().includes(this.chatSearch.toLowerCase())
+        })
+        }
     }
-
 }).mount("#app-container");
